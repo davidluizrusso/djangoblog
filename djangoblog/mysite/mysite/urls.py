@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', login, {'template_name': 'login.html'}, name="login"),
     path('logout/', logout, {'next_page': '/'}, name="logout"),
+    path('accounts/', include('allauth.urls')),
 ]
